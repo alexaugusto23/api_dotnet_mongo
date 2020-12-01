@@ -1,4 +1,4 @@
-#Projeto Usuário Uber
+# Projeto Usuário Uber
 
 Projeto de localização de usuários Uber.
 
@@ -6,7 +6,7 @@ _Link Deploy Azure: https://api-uber-usuario.azurewebsites.net/usuario_
 
 _Link map: https://charts.mongodb.com/charts-mongo-dio-ouzhj/public/dashboards/b3de5c8e-3c10-42ed-8e6a-c76541427e5d_
 
-##Tecnoligias
+## Tecnologias 
 
 <img align="left" alt="csharp" width="40px" src="https://github.com/alexaugusto23/alexaugusto23/blob/main/imgs/csharp.png">
 <img align="left" alt="dotnet" width="40px" src="https://github.com/alexaugusto23/alexaugusto23/blob/main/imgs/dotnet.png">
