@@ -35,6 +35,6 @@ Coloque Sua localização:
 
 }
 
-<img align="left" alt="postman" width="500px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/postman.jpg">
+<img align="left" alt="postman" width="700px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/postman.jpg">
 
-<img align="left" alt="chart" width="500px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/map.jpg">
+<img align="left" alt="chart" width="700px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/map.jpg">
