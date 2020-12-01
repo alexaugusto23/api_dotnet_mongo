@@ -7,15 +7,15 @@ namespace Api.Data.Collections
     {
         public Usuario(int dataId, string dataNome , DateTime dataNascimento, string sexo, double latitude, double longitude)
         {
-            this.id = dataId;
-            this.nome = dataNome;
+            this.Id = dataId;
+            this.Nome = dataNome;
             this.DataNascimento = dataNascimento;
             this.Sexo = sexo;
             this.Localizacao = new GeoJson2DGeographicCoordinates(longitude, latitude);
         }
         
-        public int id { get; set; }
-        public string nome { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Sexo { get; set; }
         public GeoJson2DGeographicCoordinates Localizacao { get; set; }

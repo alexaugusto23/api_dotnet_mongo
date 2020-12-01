@@ -12,48 +12,48 @@ namespace Api.Controllers
     public class UsuarioController : ControllerBase
     {
         Data.MongoDB _mongoDB;
-        IMongoCollection<Usuario> _infectadosCollection;
+        IMongoCollection<Usuario> _usuarioCollection;
 
         public UsuarioController(Data.MongoDB mongoDB)
         {
             _mongoDB = mongoDB;
-            _infectadosCollection = _mongoDB.DB.GetCollection<Usuario>(typeof(Usuario).Name.ToLower());
+            _usuarioCollection = _mongoDB.DB.GetCollection<Usuario>(typeof(Usuario).Name.ToLower());
         }
 
         [HttpGet]
-        public ActionResult ObterInfectados()
+        public ActionResult Obter()
         {
-            var infectados = _infectadosCollection.Find(Builders<Usuario>.Filter.Empty).ToList();
+            var usuarios = _usuarioCollection.Find(Builders<Usuario>.Filter.Empty).ToList();
             
-            return Ok(infectados);
+            return Ok(usuarios);
         }
 
         [HttpPost]
-        public ActionResult SalvarInfectado([FromBody] UsuarioDto dto)
+        public ActionResult Salvar([FromBody] UsuarioDto dto)
         {
-            var infectado = new Usuario(dto.id, dto.nome, dto.DataNascimento, dto.Sexo, dto.Latitude, dto.Longitude);
+            var usuarios = new Usuario(dto.Id, dto.Nome, dto.DataNascimento, dto.Sexo, dto.Latitude, dto.Longitude);
 
-            _infectadosCollection.InsertOne(infectado);
+            _usuarioCollection.InsertOne(usuarios);
             
-            return StatusCode(201, "Infectado adicionado com sucesso");
+            return StatusCode(201, "Adicionado com sucesso");
         }
 
                 
         [HttpPut]
-        public ActionResult AtualizarInfectados([FromBody] UsuarioDto dto)
+        public ActionResult Atualizar([FromBody] UsuarioDto dto)
         {
-            var infectado = new Usuario(dto.id, dto.nome, dto.DataNascimento, dto.Sexo, dto.Latitude, dto.Longitude);
+            var usuarios = new Usuario(dto.Id, dto.Nome, dto.DataNascimento, dto.Sexo, dto.Latitude, dto.Longitude);
 
-            _infectadosCollection.UpdateOne(Builders<Usuario>.Filter.Where(_ => _.DataNascimento == dto.DataNascimento), Builders<Usuario>.Update.Set("sexo",dto.Sexo));
+            _usuarioCollection.UpdateOne(Builders<Usuario>.Filter.Where(_ => _.Id == dto.Id), Builders<Usuario>.Update.Set("sexo",dto.Sexo));
            
             return Ok("Atualizado com sucesso");
         }
 
-        [HttpDelete("{dataNasc}")]
-        public ActionResult DeletarInfectados(DateTime Datanasc)
+        [HttpDelete("{dataId}")]
+        public ActionResult Deletar(int DataId)
         {
             
-            _infectadosCollection.DeleteOne(Builders<Usuario>.Filter.Where(_ => _.DataNascimento == Datanasc));
+            _usuarioCollection.DeleteOne(Builders<Usuario>.Filter.Where(_ => _.Id == DataId));
            
             return Ok("Deletado com sucesso");
         }

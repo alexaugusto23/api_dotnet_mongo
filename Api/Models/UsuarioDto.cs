@@ -4,8 +4,8 @@ namespace Api.Models
 {
     public class UsuarioDto
     {   
-        public int id { get; set; }
-        public string nome { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Sexo { get; set; }
         public double Latitude { get; set; }
