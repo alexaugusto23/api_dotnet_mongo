@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using System;
+using System.Collections.Immutable;
 using Api.Data.Collections;
 using Api.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -45,22 +46,16 @@ namespace Api.Controllers
 
             _infectadosCollection.UpdateOne(Builders<Infectado>.Filter.Where(_ => _.DataNascimento == dto.DataNascimento), Builders<Infectado>.Update.Set("sexo",dto.Sexo));
            
-            var infectados = _infectadosCollection.Find(Builders<Infectado>.Filter.Empty).ToList();
-            
             return Ok("Atualizado com sucesso");
         }
 
-        [HttpDelete]
-        public ActionResult DeletarInfectados()
+        [HttpDelete("{dataNasc}")]
+        public ActionResult DeletarInfectados(DateTime Datanasc)
         {
-            var infectados = _infectadosCollection.Find(Builders<Infectado>.Filter.Empty).ToList();
             
-            return Ok(infectados);
+            _infectadosCollection.DeleteOne(Builders<Infectado>.Filter.Where(_ => _.DataNascimento == Datanasc));
+           
+            return Ok("Deletado com sucesso");
         }
-
-
-
-
-
     }
 }
