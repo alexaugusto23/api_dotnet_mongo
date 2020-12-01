@@ -1,4 +1,5 @@
-﻿using Api.Data.Collections;
+﻿using System.Collections.Immutable;
+using Api.Data.Collections;
 using Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -18,6 +19,14 @@ namespace Api.Controllers
             _infectadosCollection = _mongoDB.DB.GetCollection<Infectado>(typeof(Infectado).Name.ToLower());
         }
 
+        [HttpGet]
+        public ActionResult ObterInfectados()
+        {
+            var infectados = _infectadosCollection.Find(Builders<Infectado>.Filter.Empty).ToList();
+            
+            return Ok(infectados);
+        }
+
         [HttpPost]
         public ActionResult SalvarInfectado([FromBody] InfectadoDto dto)
         {
@@ -28,12 +37,30 @@ namespace Api.Controllers
             return StatusCode(201, "Infectado adicionado com sucesso");
         }
 
-        [HttpGet]
-        public ActionResult ObterInfectados()
+                
+        [HttpPut]
+        public ActionResult AtualizarInfectados([FromBody] InfectadoDto dto)
+        {
+            var infectado = new Infectado(dto.DataNascimento, dto.Sexo, dto.Latitude, dto.Longitude);
+
+            _infectadosCollection.UpdateOne(Builders<Infectado>.Filter.Where(_ => _.DataNascimento == dto.DataNascimento), Builders<Infectado>.Update.Set("sexo",dto.Sexo));
+           
+            var infectados = _infectadosCollection.Find(Builders<Infectado>.Filter.Empty).ToList();
+            
+            return Ok("Atualizado com sucesso");
+        }
+
+        [HttpDelete]
+        public ActionResult DeletarInfectados()
         {
             var infectados = _infectadosCollection.Find(Builders<Infectado>.Filter.Empty).ToList();
             
             return Ok(infectados);
         }
+
+
+
+
+
     }
 }

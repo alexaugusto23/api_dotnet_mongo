@@ -1,0 +1,5 @@
+C:\git\api_dotnet_mongo\Api\obj\Debug\netcoreapp3.1\Api.csprojAssemblyReference.cache
+C:\git\api_dotnet_mongo\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfoInputs.cache
+C:\git\api_dotnet_mongo\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfo.cs
+C:\git\api_dotnet_mongo\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
+C:\git\api_dotnet_mongo\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
