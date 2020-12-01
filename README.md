@@ -11,6 +11,7 @@ _Link map: https://charts.mongodb.com/charts-mongo-dio-ouzhj/public/dashboards/b
 <img align="left" alt="csharp" width="40px" src="https://github.com/alexaugusto23/alexaugusto23/blob/main/imgs/csharp.png">
 <img align="left" alt="dotnet" width="40px" src="https://github.com/alexaugusto23/alexaugusto23/blob/main/imgs/dotnet.png">
 
+<br>
 
 ### Input dos dados:
 
@@ -34,8 +35,6 @@ Coloque Sua localização:
 
 }
 
-<img align="left" alt="postman" width="250px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/postman.jpg">
+<img align="left" alt="postman" width="500px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/postman.jpg">
 
-<br>
-
-<img align="left" alt="chart" width="250px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/map.jpg">
+<img align="left" alt="chart" width="500px" src="https://github.com/alexaugusto23/api_dotnet_mongo/blob/master/Api/img/map.jpg">
