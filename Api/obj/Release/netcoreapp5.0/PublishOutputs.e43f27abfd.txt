@@ -1,0 +1,15 @@
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\Api.exe
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\appsettings.json
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\Api.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\Api.deps.json
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\Api.runtimeconfig.json
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\Api.pdb
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\DnsClient.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\MongoDB.Bson.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\MongoDB.Driver.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\MongoDB.Driver.Core.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\MongoDB.Libmongocrypt.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\SharpCompress.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\runtimes\win\native\libzstd.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\runtimes\win\native\snappy32.dll
+C:\git\api_dotnet_mongo\Api\obj\Release\netcoreapp5.0\PubTmp\Out\runtimes\win\native\snappy64.dll
