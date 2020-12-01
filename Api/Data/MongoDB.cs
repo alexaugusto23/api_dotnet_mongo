@@ -31,9 +31,9 @@ namespace Api.Data
             var conventionPack = new ConventionPack { new CamelCaseElementNameConvention() };
             ConventionRegistry.Register("camelCase", conventionPack, t => true);
 
-            if (!BsonClassMap.IsClassMapRegistered(typeof(Infectado)))
+            if (!BsonClassMap.IsClassMapRegistered(typeof(Usuario)))
             {
-                BsonClassMap.RegisterClassMap<Infectado>(i =>
+                BsonClassMap.RegisterClassMap<Usuario>(i =>
                 {
                     i.AutoMap();
                     i.SetIgnoreExtraElements(true);
